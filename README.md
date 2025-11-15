@@ -39,13 +39,3 @@ docker logs ctf-vulnerable-box
 # Test web application
 curl http://localhost:8080/ping.php
 
-# Check container status
-docker ps
-
-
-
-# View logs
-docker logs ctf-vulnerable-box
-
-# Test web application
-curl http://localhost:8080/ping.php
