@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  ctf-box:
+    build: .
+    container_name: ctf-vulnerable-box
+    ports:
+      - "8080:80"    # Web application
+      - "2223:22"    # SSH
+    cap_add:
+      - NET_ADMIN    # Required for ping command
+    networks:
+      - ctf-network
+    restart: unless-stopped
+
+networks:
+  ctf-network:
+    driver: bridge
